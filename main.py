@@ -8,7 +8,7 @@ st.title('Whisper Audio Transcription')
 
 api_key = st.text_input("OpenAI API Key:", value=None)
 
-file = st.file_uploader("Audio-File", type=['m4a', 'mp3', 'webm', 'mp4', 'mpga', 'wav', 'mpeg'], help="File must be less than 25MB")
+file = st.file_uploader("Audio-File", type=['m4a', 'mp3', 'webm', 'mp4', 'mpga', 'wav', 'mpeg'], help="File must be less than 24MB")
 
 language = st.selectbox("Language:", ['de', 'en'])
 
