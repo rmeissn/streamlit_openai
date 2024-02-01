@@ -20,6 +20,17 @@ tab1, tab2, tab3 = st.tabs(["Speech to Text", "Text to Speech", "Image Generatio
 
 with tab1:
     st.header("Whisper Audio Transcription")
+    with st.expander("How to use with larger files"):
+        st.write("""
+        1. Try to start with high quality audio files. Either .wav files or high bandwith compressed files (e.g. mp3 320kbit/s).
+        2. Convert your file to mp3 or ogg format, using more than 64kbt/s bitrate (better 128kbit/s).
+        3. If your file is larger than 25MB, cut it into smaller parts to match 25MB/file. Use e.g. [Audacity](https://www.audacity.de/downloads/) as a tool
+            1. Open Audacity and import the MP3 file to cut by clicking on File > Import > Audio.
+            2. Select the portion of the Mp3 file you want to cut by clicking and dragging on the timeline.
+            3. Click on Edit > Cut.
+            4. Click on File > Export > Export as ... to save the changes.
+        4. Upload the prepared file(s) and proceed.
+        """)
     file = st.file_uploader(
         "Audio-File",
         type=["flac", "mp3", "mp4", "mpeg", "mpga", "m4a", "ogg", "wav", "webm"],
